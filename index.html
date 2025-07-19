@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李嘉烁 - 腾讯战略部AI实习生</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony (Light neutrals with a muted sky blue accent) -->
+    <!-- Application Structure Plan: A tabbed single-page application (Overview, Projects, Skills & Awards) to allow non-linear exploration. The overview uses a radar chart for a quick summary of strengths. Projects are presented as interactive cards with drill-down details to make dense information digestible. This portfolio-like structure is more engaging and allows recruiters to quickly find information relevant to the AI Product Intern role. -->
+    <!-- Visualization & Content Choices: 1. Candidate Strengths -> Goal: Inform/Compare -> Viz: Radar Chart -> Interaction: Hover tooltips -> Justification: Provides a quick, visual synthesis of key competencies. -> Library: Chart.js. 2. Projects -> Goal: Organize/Detail -> Viz: Interactive Cards -> Interaction: Click to expand -> Justification: Hides complexity, prevents information overload, encourages exploration. -> Library: Vanilla JS + Tailwind. 3. Skills -> Goal: Inform -> Viz: Styled Tags -> Interaction: None -> Justification: Clear, non-subjective grouping. -> Library: HTML + Tailwind. 4. Awards -> Goal: Inform -> Viz: Accordion List -> Interaction: Click to expand -> Justification: Manages long text descriptions effectively. -> Library: Vanilla JS + Tailwind. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .tab-active {
+            border-color: #0284c7; /* sky-600 */
+            color: #0284c7;
+            background-color: #e0f2fe; /* sky-100 */
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #475569; /* slate-600 */
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .project-card, .award-item {
+            transition: all 0.3s ease-in-out;
+        }
+        .project-card .details, .award-item .details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-8">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold text-slate-900">李嘉烁</h1>
+                <p class="text-xl text-sky-700 mt-1">腾讯战略部-AI实习生</p>
+                <div class="flex items-center justify-center md:justify-start space-x-4 mt-3 text-slate-600 text-sm">
+                    <span>◎ 深圳 随时到岗</span>
+                    <span>|</span>
+                    <span>17362281906</span>
+                    <span>|</span>
+                    <span>212144787@qq.com</span>
+                </div>
+            </div>
+            <div class="flex space-x-2 mt-4 md:mt-0">
+                <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">AI 产品爱好者</span>
+                <span class="bg-rose-100 text-rose-800 text-xs font-medium px-2.5 py-1 rounded-full">市场洞察者</span>
+                <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-1 rounded-full">实践型构建者</span>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="mb-8 border-b border-slate-200">
+            <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
+                <button class="tab-btn tab-active text-base font-medium text-center py-3 px-4 border-b-2" data-tab="overview">概览</button>
+                <button class="tab-btn tab-inactive text-base font-medium text-center py-3 px-4 border-b-2" data-tab="projects">项目经验</button>
+                <button class="tab-btn tab-inactive text-base font-medium text-center py-3 px-4 border-b-2" data-tab="skills-awards">技能与奖项</button>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold mb-4 text-slate-800">个人简介</h2>
+                    <div class="prose prose-slate max-w-none text-slate-700 space-y-3">
+                        <ol class="list-decimal pl-5">
+                            <li>具备扎实的AI大模型技术理解能力，深入体验过ChatGPT、Gemini、豆包、Coze扣子空间、GitHub Copilot等AI产品。</li>
+                            <li>熟悉AIGC相关前沿技术和市场趋势，具备较强的数据分析和解决问题能力。</li>
+                            <li>熟悉AI产品的设计方法及流程，拥有操作和管理智能体的经验。</li>
+                            <li>拥有生物专业背景和科研经历，熟练研读论文，并具备较强的自驱力和自学能力，渴望为腾讯战略部在AI领域的探索与发展贡献力量。</li>
+                        </ol>
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-slate-800">教育背景</h3>
+                    <div class="prose prose-slate max-w-none text-slate-700">
+                        <p><strong>青岛科技大学</strong> | 合成生物学 | 本科 | GPA 3.05 | 2023.9 - 2027.6</p>
+                        <p>主修课程: 概率论与数理统计, 大学计算机基础, 高等数学, 线性代数, Python 程序设计, 有机化学, 生物化学, 微生物学, 分子生物学, 合成生物学。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm mt-8">
+                    <h2 class="text-2xl font-bold mb-4 text-slate-800">核心能力一览</h2>
+                    <p class="text-slate-600 mb-6">以下是我在AI创新产品实习岗位上所需核心能力的自我评估。这反映了我的知识储备和实践经验，我渴望在实习中将这些能力转化为实际的产品价值。</p>
+                    <div class="chart-container w-full max-w-lg mx-auto h-80 md:h-96">
+                        <canvas id="abilityChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                 <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold mb-4 text-slate-800">项目经验</h2>
+                    <p class="text-slate-600 mb-6">在这些项目中，我不仅学习和应用了前沿的AI技术，更重要的是，我经历了从概念构思到功能实现、测试优化和文档撰写的完整产品流程。点击项目卡片可以查看更多详情。</p>
+                    <div id="project-list" class="space-y-4">
+                        <!-- Project items will be injected by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills & Awards Section -->
+            <section id="skills-awards" class="content-section">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4 text-slate-800">专业技能</h2>
+                        <p class="text-slate-600 mb-6">我掌握了产品设计、数据分析及软件开发所需的多项技能，并熟练运用相关工具来提升工作效率。</p>
+                        <div id="skills-list" class="space-y-6">
+                            <!-- Skills will be injected by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4 text-slate-800">荣誉奖项</h2>
+                        <p class="text-slate-600 mb-6">这些奖项不仅是对我学业能力的肯定，更是我运用数学建模、算法和团队协作解决复杂问题的实践证明。</p>
+                        <div id="awards-list" class="space-y-2">
+                             <!-- Awards will be injected by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Data
+            const projectData = [
+                {
+                    title: '二次元陪伴聊天机器人',
+                    date: '2025.6',
+                    summary: '基于Coze平台，主导了一款情感陪聊智能体的完整工作流构建与优化，深入实践了Prompt设计、功能测试与用户体验迭代。',
+                    details: [
+                        '核心职责: 负责从需求规划、功能执行到效果完善的全流程，针对2C虚拟角色场景优化功能与性能。',
+                        '协作与优化: 与AI技术伙伴紧密协作，共同探讨并迭代Prompt设计策略，显著提升对话质量和用户沉浸感。',
+                        '产品测试: 主动进行多轮产品功能测试，系统性记录和整理用户反馈及潜在Bug，提出并推动了多项功能体验的持续优化。'
+                    ],
+                    tags: ['Coze', 'Agent', '工作流', 'Prompt 优化', '产品测试', '用户反馈']
+                },
+                {
+                    title: '旅游出行规划助手',
+                    date: '2025.6 - 2025.7',
+                    summary: '基于CAMEL框架复现了一个模块化的多智能体协作系统，并独立完成了产品文档撰写和模拟运营策略设计。',
+                    details: [
+                        '系统理解: 深入学习并复现了包含用户意图识别、信息检索、攻略生成和反馈优化的多智能体系统。',
+                        '产品文档: 独立撰写产品功能说明文档，包括核心模块介绍和用户操作指南，确保信息清晰易懂。',
+                        '运营思考: 模拟产品上线后的运营场景，设计了用户反馈收集机制，并提出内容更新和用户互动的初步策略。'
+                    ],
+                    tags: ['多智能体', 'CAMEL框架', '智能规划', '产品文档', '运营策略']
+                },
+                {
+                    title: '合成生物学竞赛蛋白设计赛 (队长)',
+                    date: '2025.5 - 2025.6',
+                    summary: '作为队长，带领团队利用AI模型进行新型荧光蛋白设计，展现了将AI技术应用于跨学科领域解决复杂问题的能力。',
+                    details: [
+                        '技术应用: 利用预训练蛋白质语言模型ESM和XGBoost回归模型，实现了对蛋白质亮度和稳定性的精准预测与优化。',
+                        '团队管理: 作为队长，负责团队成员间的沟通协调与任务分配，确保项目按时高质量完成，并定期向指导老师汇报工作进展。'
+                    ],
+                    tags: ['AI辅助设计', 'XGBoost', 'ESM语言模型', '团队管理']
+                },
+                {
+                    title: 'Foundations-of-LLMs',
+                    date: '2025.5 - 2025.6',
+                    summary: '通过自学浙江大学的大模型基础课程，系统掌握了LLM的核心技术原理，为AI产品工作奠定了坚实的技术认知基础。',
+                    details: [
+                        '学习内容: 深入理解了传统语言模型、大语言模型架构演化、Prompt工程、参数高效微调(PEFT)、模型编辑、检索增强生成(RAG)等核心AI技术。',
+                        '能力转化: 掌握了Prompt设计原理与优化方法，能更好地与算法工程师协作，将技术潜力转化为产品功能。'
+                    ],
+                    tags: ['大模型', 'RAG', 'Prompt工程', 'PEFT']
+                }
+            ];
+
+            const skillsData = [
+                {
+                    category: '产品设计',
+                    icon: '�',
+                    skills: ['用户分析', '产品规划', '原型设计 (墨刀)', 'PRD撰写', '竞品分析', '用户画像']
+                },
+                {
+                    category: 'AI 领域',
+                    icon: '🤖',
+                    skills: ['AIGC', '大语言模型 (LLM)', 'Prompt 工程', '多智能体', '市场与技术趋势分析']
+                },
+                {
+                    category: '数据与开发',
+                    icon: '🐍',
+                    skills: ['Python', 'Pandas (数据处理)', 'Matplotlib (可视化)', '基本算法理解']
+                },
+                {
+                    category: '软件与协作',
+                    icon: '💼',
+                    skills: ['XMind', 'Word', 'Excel', 'PowerPoint', 'Git', '团队协作']
+                }
+            ];
+
+            const awardsData = [
+                {
+                    title: '全国大学生数学建模竞赛山东省二等奖',
+                    date: '2024.10',
+                    details: '主导开发电子制造“成本-质量-利润”优化决策系统。通过建立0-1整数规划模型并实施分层求解策略，为企业提供了科学的动态质控方案。此项目锻炼了我在复杂约束下进行量化分析和模型构建的能力。'
+                },
+                {
+                    title: '美国大学生数学建模竞赛S奖 (国际三等奖)',
+                    date: '2025.2',
+                    details: '基于奥运历史数据预测未来奖牌数。综合运用指数平滑法、多元线性回归和时间序列分析，实现了精准预测和影响因素量化。此项目提升了我处理真实世界数据、验证模型鲁棒性的能力。'
+                },
+                {
+                    title: '中国合成生物学竞赛银奖',
+                    date: '2024.8',
+                    details: '作为核心成员参与项目，该奖项是对我们团队在合成生物学领域的创新和实践能力的认可。'
+                },
+                 {
+                    title: '校内三等奖学金',
+                    date: '多次',
+                    details: '学业表现良好的证明。'
+                }
+            ];
+            
+            // Render Content
+            function renderProjects() {
+                const container = document.getElementById('project-list');
+                container.innerHTML = projectData.map(p => `
+                    <div class="project-card border border-slate-200 rounded-lg p-4 cursor-pointer hover:shadow-md hover:border-sky-300">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-slate-800">${p.title}</h3>
+                            <span class="text-sm text-slate-500 flex-shrink-0 ml-4">${p.date}</span>
+                        </div>
+                        <p class="text-slate-600 mt-2">${p.summary}</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            ${p.tags.map(tag => `<span class="bg-slate-100 text-slate-700 text-xs font-medium px-2 py-1 rounded-md">${tag}</span>`).join('')}
+                        </div>
+                        <div class="details mt-4 prose prose-sm max-w-none text-slate-600">
+                            <ul>
+                                ${p.details.map(d => `<li>${d.replace(/<strong>(.*?)<\/strong>/g, '<strong>$1</strong>')}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            function renderSkills() {
+                const container = document.getElementById('skills-list');
+                container.innerHTML = skillsData.map(s => `
+                    <div>
+                        <h4 class="text-md font-bold text-slate-700 mb-3 flex items-center"><span class="mr-2">${s.icon}</span> ${s.category}</h4>
+                        <div class="flex flex-wrap gap-2">
+                            ${s.skills.map(skill => `<span class="bg-sky-100 text-sky-800 text-sm font-medium px-3 py-1 rounded-full">${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            function renderAwards() {
+                const container = document.getElementById('awards-list');
+                container.innerHTML = awardsData.map(a => `
+                    <div class="award-item border-t border-slate-200 py-3 cursor-pointer">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-semibold text-slate-700">${a.title}</h4>
+                            <span class="text-sm text-slate-500">${a.date}</span>
+                        </div>
+                        <div class="details mt-2">
+                            <p class="text-sm text-slate-600">${a.details}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+
+            renderProjects();
+            renderSkills();
+            renderAwards();
+
+            // Interactivity
+            const tabs = document.querySelectorAll('.tab-btn');
+            const sections = document.querySelectorAll('.content-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('tab-active');
+                        t.classList.add('tab-inactive');
+                    });
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    tab.classList.add('tab-active');
+                    tab.classList.remove('tab-inactive');
+                    document.getElementById(tab.dataset.tab).classList.add('active');
+                });
+            });
+
+            document.querySelectorAll('.project-card, .award-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const details = item.querySelector('.details');
+                    if (details.style.maxHeight && details.style.maxHeight !== '0px') {
+                        details.style.maxHeight = '0px';
+                        item.classList.remove('bg-sky-50');
+                    } else {
+                        details.style.maxHeight = details.scrollHeight + 'px';
+                        item.classList.add('bg-sky-50');
+                    }
+                });
+            });
+            
+            // Chart.js Radar Chart
+            const ctx = document.getElementById('abilityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['AI 技术理解', '产品设计思维', '市场洞察力', '数据分析与建模', '动手实践能力', '沟通与协作'],
+                    datasets: [{
+                        label: '能力评估',
+                        data: [90, 85, 95, 90, 90, 85],
+                        backgroundColor: 'rgba(2, 132, 199, 0.2)', // sky-600 with opacity
+                        borderColor: 'rgb(2, 132, 199)',
+                        pointBackgroundColor: 'rgb(2, 132, 199)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(2, 132, 199)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 14,
+                                    family: "'Noto Sans SC', sans-serif"
+                                },
+                                color: '#1e293b' // slate-800
+                            },
+                            ticks: {
+                                backdropColor: 'rgba(0,0,0,0)',
+                                stepSize: 20
+                            },
+                             min: 0,
+                             max: 100
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                           display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+�
