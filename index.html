@@ -1,4 +1,3 @@
-from pathlib import Path
 
 html = """<!doctype html>
 <html lang="zh-CN">
@@ -190,9 +189,6 @@ html = """<!doctype html>
           <a class="btn secondary" href="#projects">查看代表项目</a>
           <a class="btn secondary" href="#awards">查看竞赛细节</a>
         </div>
-        <div class="note">
-          提示：将本页保存为 <code>index.html</code> 并放入 GitHub 仓库根目录，即可通过 GitHub Pages 部署。
-        </div>
       </div>
 
       <div class="card">
@@ -365,6 +361,6 @@ html = """<!doctype html>
 </body>
 </html>
 """
-out = Path("/mnt/data/index.html")
+
 out.write_text(html, encoding="utf-8")
 print(out)
