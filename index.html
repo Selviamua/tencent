@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI for Science / Agentic Science | 李嘉烁 个人展示页（GitHub Pages）" />
+  <meta name="description" content="AI for Science / Agentic Science | 李嘉烁个人展示页（GitHub Pages）" />
   <title>李嘉烁 | AI for Science Portfolio</title>
   <style>
     :root{
@@ -15,10 +15,10 @@
       --border:rgba(255,255,255,.10);
       --link:#9bb0ff;
       --accent:#7aa7ff;
-      --shadow: 0 18px 50px rgba(0,0,0,.35);
-      --radius: 18px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif;
     }
     [data-theme="light"]{
       --bg:#f7f8ff;
@@ -29,7 +29,7 @@
       --border:rgba(16,23,44,.12);
       --link:#2b59ff;
       --accent:#2b59ff;
-      --shadow: 0 18px 50px rgba(17,24,51,.12);
+      --shadow:0 18px 50px rgba(17,24,51,.12);
     }
     *{box-sizing:border-box}
     body{
@@ -41,117 +41,59 @@
       color:var(--text);
       line-height:1.6;
     }
-    a{color:var(--link); text-decoration:none}
+    a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1080px; margin:0 auto; padding:28px 18px 64px}
-    .topbar{
-      position:sticky; top:0; z-index:20;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(11,16,32,.85), rgba(11,16,32,.35));
-      border-bottom:1px solid var(--border);
-    }
-    [data-theme="light"] .topbar{
-      background: linear-gradient(to bottom, rgba(247,248,255,.92), rgba(247,248,255,.65));
-    }
-    .topbar-inner{max-width:1080px; margin:0 auto; padding:12px 18px; display:flex; gap:14px; align-items:center; justify-content:space-between}
-    .brand{display:flex; align-items:center; gap:10px}
-    .avatar{
-      width:38px; height:38px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(122,167,255,.95), rgba(124,255,178,.85));
-      box-shadow: var(--shadow);
-    }
-    .brand h1{font-size:15px; margin:0}
-    .brand .sub{font-size:12px; color:var(--muted); margin-top:2px}
-    .nav{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:flex-end}
-    .chip{
-      padding:7px 10px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      background: rgba(255,255,255,.04);
-      font-size:12px;
-      color:var(--text);
-      cursor:pointer;
-      user-select:none;
-    }
-    [data-theme="light"] .chip{background: rgba(16,23,44,.03)}
-    .chip:hover{border-color: rgba(122,167,255,.55)}
-    .hero{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 880px){ .hero{grid-template-columns:1fr} }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    [data-theme="light"] .card{
-      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(242,244,255,1));
-    }
-    .headline{font-size:30px; line-height:1.2; margin:0 0 10px}
-    .tagline{margin:0; color:var(--muted)}
-    .cta{margin-top:14px; display:flex; flex-wrap:wrap; gap:10px}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background: rgba(122,167,255,.14);
-      color:var(--text);
-      font-size:13px;
-      text-decoration:none;
-    }
-    .btn:hover{border-color: rgba(122,167,255,.6)}
-    .btn.secondary{background: rgba(255,255,255,.04)}
-    [data-theme="light"] .btn.secondary{background: rgba(16,23,44,.04)}
-    .kv{display:grid; grid-template-columns: 140px 1fr; gap:10px; margin-top:12px; font-size:13px}
-    .kv div{padding:8px 10px; border:1px solid var(--border); border-radius:12px; background: rgba(255,255,255,.03)}
-    [data-theme="light"] .kv div{background: rgba(16,23,44,.03)}
+    .container{max-width:1080px;margin:0 auto;padding:28px 18px 64px}
+    .topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:linear-gradient(to bottom, rgba(11,16,32,.85), rgba(11,16,32,.35));border-bottom:1px solid var(--border)}
+    [data-theme="light"] .topbar{background:linear-gradient(to bottom, rgba(247,248,255,.92), rgba(247,248,255,.65))}
+    .topbar-inner{max-width:1080px;margin:0 auto;padding:12px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px}
+    .avatar{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg, rgba(122,167,255,.95), rgba(124,255,178,.85));box-shadow:var(--shadow)}
+    .brand h1{font-size:15px;margin:0}
+    .brand .sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .nav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+    .chip{padding:7px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.04);font-size:12px;color:var(--text);cursor:pointer;user-select:none}
+    [data-theme="light"] .chip{background:rgba(16,23,44,.03)}
+    .chip:hover{border-color:rgba(122,167,255,.55)}
+    .hero{margin-top:22px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    [data-theme="light"] .card{background:linear-gradient(180deg, rgba(255,255,255,1), rgba(242,244,255,1))}
+    .headline{font-size:30px;line-height:1.2;margin:0 0 10px}
+    .tagline{margin:0;color:var(--muted)}
+    .hero-text{margin:10px 0 0;font-size:14px;color:var(--text)}
+    .cta{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(122,167,255,.14);color:var(--text);font-size:13px;text-decoration:none}
+    .btn:hover{border-color:rgba(122,167,255,.6)}
+    .btn.secondary{background:rgba(255,255,255,.04)}
+    [data-theme="light"] .btn.secondary{background:rgba(16,23,44,.04)}
+    .kv{display:grid;grid-template-columns:140px 1fr;gap:10px;margin-top:12px;font-size:13px}
+    .kv div{padding:8px 10px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.03)}
+    [data-theme="light"] .kv div{background:rgba(16,23,44,.03)}
     .kv .k{color:var(--muted)}
     .section{margin-top:18px}
-    .section h2{
-      margin:0 0 10px;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
-    .item h3{margin:0 0 6px; font-size:15px}
-    .meta{font-size:12px; color:var(--muted); margin-bottom:8px}
-    .bullets{margin:0; padding-left:18px; color:var(--text); font-size:13px}
+    .section h2{margin:0 0 10px;font-size:18px;letter-spacing:.2px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}}
+    .item h3{margin:0 0 6px;font-size:15px}
+    .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .bullets{margin:0;padding-left:18px;color:var(--text);font-size:13px}
     .bullets li{margin:6px 0}
-    details{
-      border:1px solid var(--border);
-      border-radius: 14px;
-      background: rgba(255,255,255,.03);
-      padding:10px 12px;
-    }
-    [data-theme="light"] details{background: rgba(16,23,44,.03)}
-    summary{cursor:pointer; font-weight:600}
-    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .pill{font-size:12px; border:1px solid var(--border); padding:6px 10px; border-radius:999px; color:var(--muted); background: rgba(255,255,255,.02)}
-    [data-theme="light"] .pill{background: rgba(255,255,255,.9)}
-    .footer{
-      margin-top:26px;
-      padding-top:14px;
-      border-top:1px solid var(--border);
-      color:var(--muted);
-      font-size:12px;
-    }
-    .note{
-      font-size:12px; color:var(--muted);
-      margin-top:10px;
-    }
-    code{font-family:var(--mono); font-size:12px}
+    details{border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.03);padding:10px 12px}
+    [data-theme="light"] details{background:rgba(16,23,44,.03)}
+    summary{cursor:pointer;font-weight:600}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{font-size:12px;border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);background:rgba(255,255,255,.02)}
+    [data-theme="light"] .pill{background:rgba(255,255,255,.9)}
+    .footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+    .note{font-size:12px;color:var(--muted);margin-top:10px}
+    .project-toolbar{display:flex;align-items:center;gap:10px;padding:0 6px 10px}
+    .project-toolbar .label{font-size:13px;color:var(--muted)}
+    .project-card{position:relative}
+    .project-move{display:flex;gap:8px;margin-bottom:10px}
+    .move-btn{padding:4px 9px;font-size:12px}
+    .move-btn:disabled{opacity:.45;cursor:not-allowed}
+    code{font-family:var(--mono);font-size:12px}
   </style>
 </head>
 <body>
@@ -160,54 +102,50 @@
       <div class="brand">
         <div class="avatar" aria-hidden="true"></div>
         <div>
-          <h1>李嘉烁</h1>
-          <div class="sub">AI for Science · Agentic Science · Synthetic Biology</div>
+          <h1 data-i18n="brand_name">李嘉烁</h1>
+          <div class="sub" data-i18n="brand_sub">AI for Science · Agentic Science · Synthetic Biology</div>
         </div>
       </div>
       <div class="nav">
-        <a class="chip" href="#about">关于</a>
-        <a class="chip" href="#projects">项目</a>
-        <a class="chip" href="#experience">经历</a>
-        <a class="chip" href="#awards">竞赛与奖项</a>
-        <span class="chip" id="themeBtn" role="button" tabindex="0">切换主题</span>
+        <a class="chip" href="#about" data-i18n="nav_about">关于</a>
+        <a class="chip" href="#projects" data-i18n="nav_projects">项目</a>
+        <a class="chip" href="#experience" data-i18n="nav_experience">经历</a>
+        <a class="chip" href="#awards" data-i18n="nav_awards">奖项</a>
+        <span class="chip" id="langBtn" role="button" tabindex="0" data-i18n="lang_btn">中文 / EN</span>
+        <span class="chip" id="themeBtn" role="button" tabindex="0" data-i18n="theme_btn">切换主题</span>
       </div>
     </div>
   </div>
 
   <div class="container">
-
     <div class="hero">
       <div class="card">
-        <h2 class="headline">AI for Science：把科研问题变成可执行、可验证的计算流程</h2>
-        <p class="tagline">
-          具备合成生物学背景，关注 AI for Science 中“问题可执行化”的工程实践，尤其是 Agent / RAG / Workflow 在科研信息理解与验证闭环中的应用。<br>
-          有综述写作与实验室经历，善于用 LLM 进行文献理解，能够将科学问题拆解为检索、结构化表示、评测与迭代优化流程，并构建可验证、可复现的实验与指标体系；具备定位系统瓶颈的能力。<br>
-          关注 Agentic Science 与科学工作流自动化，使用过SciMaster等科研agent，期望在真实科研场景中推进可执行、可验证的 AI4S 实践。
-        </p>
+        <h2 class="headline" data-i18n="headline">AI for Science：把科研问题变成可执行、可验证的计算流程</h2>
+        <p class="tagline" data-i18n="tagline">聚焦 Agent / RAG / Workflow 在科学知识理解与验证闭环中的工程化落地。</p>
+        <p class="hero-text" data-i18n="hero_p1">具备合成生物学背景，关注 AI for Science 中“问题可执行化”的工程实践。</p>
+        <p class="hero-text" data-i18n="hero_p2">有综述写作与实验室经历，善于用 LLM 进行文献理解并搭建可复现评测流程。</p>
+        <p class="hero-text" data-i18n="hero_p3">持续探索 Agentic Science 在真实科研场景中的可用性、可验证性与可扩展性。</p>
         <div class="cta">
-          <a class="btn" href="https://github.com/Selviamua" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn secondary" href="#projects">查看代表项目</a>
-          <a class="btn secondary" href="#awards">查看竞赛细节</a>
-        </div>
-        <div class="note">
-          
+          <a class="btn" href="https://github.com/Selviamua" target="_blank" rel="noopener" data-i18n="cta_github">GitHub</a>
+          <a class="btn secondary" href="#projects" data-i18n="cta_projects">查看代表项目</a>
+          <a class="btn secondary" href="#awards" data-i18n="cta_awards">查看竞赛细节</a>
         </div>
       </div>
 
       <div class="card">
         <div class="section" style="margin-top:0">
-          <h2>Quick Profile</h2>
+          <h2 data-i18n="quick_profile">Quick Profile</h2>
           <div class="kv">
-            <div class="k">研究/兴趣</div><div>AI for Science · 问题可执行化 · 科研工作流自动化 · 文献理解与验证闭环</div>
-            <div class="k">方向关键词</div><div>Agentic Science · Agent / RAG / Workflow · 评测与迭代优化 · 科研自动化</div>
-            <div class="k">技术栈</div><div>Python · LangChain · Chroma/FAISS · Prompt Engineering · Workflow/Agent · 数据采集/清洗</div>
-            <div class="k">期望工作地点</div><div>北京 / 上海 / 深圳</div>
+            <div class="k" data-i18n="qp_interest_k">研究/兴趣</div><div data-i18n="qp_interest_v">AI for Science · 问题可执行化 · 科研工作流自动化 · 文献理解与验证闭环</div>
+            <div class="k" data-i18n="qp_keywords_k">方向关键词</div><div data-i18n="qp_keywords_v">Agentic Science · Agent / RAG / Workflow · 评测与迭代优化 · 科研自动化</div>
+            <div class="k" data-i18n="qp_stack_k">技术栈</div><div data-i18n="qp_stack_v">Python · LangChain · Chroma/FAISS · Prompt Engineering · Workflow/Agent · 数据采集与清洗</div>
+            <div class="k" data-i18n="qp_location_k">期望工作地点</div><div data-i18n="qp_location_v">北京 / 上海 / 深圳</div>
           </div>
           <div class="pillrow">
-            <span class="pill">Agent / RAG</span>
-            <span class="pill">Workflow 自动化</span>
-            <span class="pill">Prompt Engineering</span>
-            <span class="pill">评测 & 复现</span>
+            <span class="pill" data-i18n="pill_1">Agent / RAG</span>
+            <span class="pill" data-i18n="pill_2">Workflow 自动化</span>
+            <span class="pill" data-i18n="pill_3">Prompt Engineering</span>
+            <span class="pill" data-i18n="pill_4">评测与复现</span>
           </div>
         </div>
       </div>
@@ -215,160 +153,511 @@
 
     <div id="about" class="section">
       <div class="card">
-        <h2>关于我</h2>
-        <p style="margin:0; color:var(--text); font-size:14px">
-          我具备合成生物学背景，同时系统性自学机器学习、深度学习与大模型相关内容，关注 AI for Science 中“问题可执行化”的工程实践以及相关前沿科技进展，尤其是 Agent / RAG / Workflow 在科研信息理解与验证闭环中的应用；
-          善于将抽象科学问题拆解为检索、结构化表示、评测与迭代优化流程，并强调可复现与可验证的指标体系建设。
-        </p>
+        <h2 data-i18n="about_h2">关于我</h2>
+        <p style="margin:0;color:var(--text);font-size:14px" data-i18n="about_p">我具备合成生物学背景，同时系统自学机器学习、深度学习与大模型相关内容，关注 AI for Science 中“问题可执行化”的工程实践，尤其是 Agent / RAG / Workflow 在科研信息理解与验证闭环中的应用。善于将抽象科学问题拆解为检索、结构化表示、评测与迭代优化流程，并强调可复现与可验证的指标体系建设。</p>
       </div>
     </div>
 
     <div id="projects" class="section">
-      <h2 style="padding:0 6px">代表项目</h2>
-      <div class="grid">
-        <div class="card item">
-          <h3>荧光蛋白：高亮度 + 热稳定性联合优化（AI 设计与筛选）</h3>
-          <div class="meta">Protein Language Model · Regression · Mutation Generation · Screening</div>
+      <h2 style="padding:0 6px" data-i18n="projects_h2">代表项目</h2>
+      <div class="project-toolbar">
+        <span class="label" data-i18n="projects_order_label">项目排序：</span>
+        <button class="chip" id="resetProjectOrder" type="button" data-i18n="projects_order_reset">恢复默认</button>
+      </div>
+      <div class="grid" id="projectsGrid">
+        <div class="card item project-card" data-project-id="p1">
+          <h3 data-i18n="p1_h3">荧光蛋白：高亮度 + 热稳定性联合优化（AI 设计与筛选）</h3>
+          <div class="meta" data-i18n="p1_meta">Protein Language Model · Regression · Mutation Generation · Screening</div>
           <ul class="bullets">
-            <li>使用预训练蛋白质语言模型 <b>ESM</b> 对荧光蛋白序列进行高维编码，捕捉进化与结构特征。</li>
-            <li>基于序列–荧光强度数据集训练 <b>XGBoost 回归模型</b>，实现亮度预测。</li>
-            <li>融合文献先验、GFP 结构分析与高亮度序列统计，开发自动化突变体生成算法；引入热稳定性偏好策略生成数万候选序列，并经模型评估与筛选获得 <b>6 个兼具高亮度与热稳定性的 avGFP 突变体</b>。</li>
+            <li data-i18n="p1_li1">使用预训练蛋白质语言模型 ESM 对荧光蛋白序列进行高维编码，捕捉进化与结构特征。</li>
+            <li data-i18n="p1_li2">基于序列-荧光强度数据集训练 XGBoost 回归模型，实现亮度预测。</li>
+            <li data-i18n="p1_li3">融合文献先验、结构分析与序列统计，构建自动化突变体生成与筛选流程，获得 6 个兼具高亮度与热稳定性的 avGFP 候选。</li>
           </ul>
         </div>
 
-        <div class="card item">
-          <h3>RAG 学术问答系统：检索准确性修复与评测驱动优化</h3>
-          <div class="meta">Vector Retrieval · Benchmark · Query Rewrite · Debug Tooling</div>
+        <div class="card item project-card" data-project-id="p2">
+          <h3 data-i18n="p2_h3">RAG 学术问答系统：检索准确性修复与评测驱动优化</h3>
+          <div class="meta" data-i18n="p2_meta">Vector Retrieval · Benchmark · Query Rewrite · Debug Tooling</div>
           <ul class="bullets">
-            <li>基于开源 RAG 项目构建学术论文问答系统，并基于自建 benchmark 做性能评估与迭代优化。</li>
-            <li>修复相似度计算问题：将向量库距离计算修正为余弦相似度以确保检索准确性。</li>
-            <li>LLM Query Rewrite：将查询重写为标准论文术语，提升低相似度问题的检索表现；并进行 chunking 参数对比实验验证适用边界。</li>
+            <li data-i18n="p2_li1">基于开源 RAG 项目构建学术论文问答系统，并使用自建 benchmark 做性能评估与迭代优化。</li>
+            <li data-i18n="p2_li2">修复相似度计算问题，将向量库距离计算修正为余弦相似度以提升检索准确性。</li>
+            <li data-i18n="p2_li3">引入 LLM Query Rewrite 与 chunking 参数对比实验，提升低相似度问题检索表现并识别适用边界。</li>
           </ul>
           <div class="cta" style="margin-top:12px">
-            <a class="btn secondary" href="https://github.com/Selviamua/rag-example" target="_blank" rel="noopener">Repo：rag-example</a>
+            <a class="btn secondary" href="https://github.com/Selviamua/rag-example" target="_blank" rel="noopener" data-i18n="p2_repo">Repo: rag-example</a>
           </div>
         </div>
-        <div class="card item">
-          <h3>细菌博弈赛：大肠杆菌运动能力多级调控强化</h3>
-          <div class="meta">Promoter engineering · Transcriptional regulation · Sigma28 overexpression · Motility assay</div>
+
+        <div class="card item project-card" data-project-id="p3">
+          <h3 data-i18n="p3_h3">Bio-Validator：基于大模型的代谢工程干预策略生成与验证</h3>
+          <div class="meta" data-i18n="p3_meta">Agentic Workflow · LLM · Validation Gates · Benchmark · Traceability</div>
           <ul class="bullets">
-            <li>通过将序列元件 IS5 整合至 flhD 操纵子调节区，干扰 OmpR 和 RcsB 等负调控因子的结合位点，解除转录抑制并提升 flhD 起始转录水平。</li>
-            <li>构建由高效 T7 启动子驱动的 sigma28 高表达质粒，实现鞭毛特异性 σ 因子增强表达，从而强化大肠杆菌在软琼脂培养基中的运动能力与趋化响应。</li>
-            <li>采用 RT-qPCR 对相关基因表达水平进行定量检测，并结合运动环直径测定完成表型验证，形成干湿实验闭环；最终显著提升菌株在群体竞争中的运动优势，并获得中国合成生物学竞赛银奖。</li>
+            <li data-i18n="p3_li1">构建可验证代谢工程建议生成工作流，利用 DeepSeek API 解析文献证据与宿主目标，输出结构化基因编辑与代谢干预策略。</li>
+            <li data-i18n="p3_li2">针对大模型在生物垂直领域的幻觉问题，开发多重 Validation Gates，自动校验实体一致性、证据引用准确性及基础可行性。</li>
+            <li data-i18n="p3_li3">自建正负例 Benchmark（真实文献溯源），通过负例拦截测试与自动化 Trace 评测报告实现评测驱动的 Workflow 优化。</li>
           </ul>
           <div class="cta" style="margin-top:12px">
-            <a class="btn secondary" href="https://github.com/Selviamua/ai4s" target="_blank" rel="noopener">Repo：ai4s</a>
+            <a class="btn secondary" href="https://github.com/Selviamua/bio-validator-demo" target="_blank" rel="noopener" data-i18n="p3_repo">Repo: bio-validator-demo</a>
+          </div>
+        </div>
+
+        <div class="card item project-card" data-project-id="p4">
+          <h3 data-i18n="p4_h3">细菌博弈赛：大肠杆菌运动能力多级调控强化</h3>
+          <div class="meta" data-i18n="p4_meta">Promoter engineering · Transcriptional regulation · Sigma28 overexpression · Motility assay</div>
+          <ul class="bullets">
+            <li data-i18n="p4_li1">通过将序列元件 IS5 整合至 flhD 操纵子调节区，干扰 OmpR 和 RcsB 等负调控因子的结合位点，解除转录抑制并提升 flhD 起始转录水平。</li>
+            <li data-i18n="p4_li2">构建由高效 T7 启动子驱动的 sigma28 高表达质粒，实现鞭毛特异性 σ 因子增强表达，从而强化大肠杆菌在软琼脂培养基中的运动能力与趋化响应。</li>
+            <li data-i18n="p4_li3">采用 RT-qPCR 对相关基因表达水平进行定量检测，并结合运动环直径测定完成表型验证，形成干湿实验闭环；最终显著提升菌株在群体竞争中的运动优势，并获得中国合成生物学竞赛银奖。</li>
+          </ul>
+          <div class="cta" style="margin-top:12px">
+            <a class="btn secondary" href="https://github.com/Selviamua/ai4s" target="_blank" rel="noopener" data-i18n="p4_repo">Repo: ai4s</a>
           </div>
         </div>
       </div>
     </div>
 
     <div id="experience" class="section">
-      <h2 style="padding:0 6px">经历与方法论</h2>
+      <h2 style="padding:0 6px" data-i18n="exp_h2">经历与方法论</h2>
       <div class="grid">
         <div class="card item">
-          <h3>AI Agent / Workflow 实习（内容生产与增长场景）</h3>
-          <div class="meta">Workflow Orchestration · Data Pipeline · Prompt Iteration</div>
+          <h3 data-i18n="e1_h3">AI Agent / Workflow 实习（内容生产与增长场景）</h3>
+          <div class="meta" data-i18n="e1_meta">Workflow Orchestration · Data Pipeline · Prompt Iteration</div>
           <ul class="bullets">
-            <li>将内容生产任务抽象为多阶段可执行流程（数据采集 → 结构化处理 → 生成 → 回流与验证闭环），探索 Agent 化在复杂任务中的可控性与稳定性。</li>
-            <li>使用 Python 构建自动化数据采集与清洗流程，将多源非结构化内容转化为结构化输入，并结合运行结果分析 Prompt 与流程设计对输出稳定性的影响。</li>
-            <li>复现典型 Workflow/Agent 示例，关注失败模式与人工介入点，用于验证方案可行性与边界。</li>
+            <li data-i18n="e1_li1">将内容生产任务抽象为多阶段可执行流程（数据采集→结构化处理→生成→回流验证闭环），探索 Agent 化在复杂任务中的可控性与稳定性。</li>
+            <li data-i18n="e1_li2">使用 Python 构建自动化数据采集与清洗流程，将多源非结构化内容转化为结构化输入，并结合运行结果分析 Prompt 与流程设计对输出稳定性的影响。</li>
+            <li data-i18n="e1_li3">复现典型 Workflow/Agent 示例，系统记录失败模式与人工介入点，用于验证方案可行性与边界。</li>
           </ul>
         </div>
 
         <div class="card item">
-          <h3>我在 AI4S 中的关注点</h3>
-          <div class="meta">From Representation → Prediction → Design → Verification Loop</div>
+          <h3 data-i18n="e2_h3">科研经历与方法论形成</h3>
+          <div class="meta" data-i18n="e2_meta">Literature Synthesis · Recursive Citation Tracing · Research Workflow Engineering</div>
+          <ul class="bullets">
+            <li data-i18n="e2_li1">围绕聚羟基烷酸酯（PHA），尤其是酵母合成 PHB 的代谢路径优化，在导师指导下开展系统性综述研究，并逐步形成结构化科研方法。</li>
+            <li data-i18n="e2_li2">采用递归式文献追踪策略，持续追溯参考文献与被引文献，梳理基因干预策略、调控机制及颗粒结构蛋白研究的演进逻辑，构建跨论文一体化知识框架。</li>
+            <li data-i18n="e2_li3">综述论文主体内容已基本完成（尚未见刊），该过程显著提升了原始文献整合、机制对比分析与结构化写作能力。</li>
+            <li data-i18n="e2_li4">在此基础上开发可验证代谢工程建议生成器，构建基于真实 PHA 文献的 20+ case benchmark，并设计多重验证机制系统评估 AI 生成建议。</li>
+            <li data-i18n="e2_li5">逐步形成方法论认识：科研问题应尽可能被结构化、可检验化，并朝向可复现流程持续演进。</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3 data-i18n="e3_h3">我在 AI4S 中的关注点</h3>
+          <div class="meta" data-i18n="e3_meta">From Representation to Prediction, Design, and Verification Loop</div>
           <details open>
-            <summary>核心闭环（适用于生命科学）</summary>
+            <summary data-i18n="e3_summary">核心闭环（适用于生命科学）</summary>
             <ul class="bullets">
-              <li><b>表征</b>：序列/结构 → embedding（如 ESM）。</li>
-              <li><b>预测</b>：性质/表型 → 回归/分类模型（如 XGBoost）。</li>
-              <li><b>设计</b>：突变/生成策略 + 约束（如热稳定性偏好）。</li>
-              <li><b>验证</b>：筛选与实验验证（wet lab / in silico）。</li>
-              <li><b>迭代</b>：评测驱动的误差分析与数据/策略更新。</li>
+              <li data-i18n="e3_li1">表征：序列/结构到 embedding（如 ESM）。</li>
+              <li data-i18n="e3_li2">预测：性质/表型到回归/分类模型（如 XGBoost）。</li>
+              <li data-i18n="e3_li3">设计：突变/生成策略与约束联合优化（如热稳定性偏好）。</li>
+              <li data-i18n="e3_li4">验证：筛选与实验验证（wet lab / in silico）。</li>
+              <li data-i18n="e3_li5">迭代：评测驱动的误差分析与数据/策略更新。</li>
             </ul>
           </details>
-          <p class="note" style="margin-bottom:0">
-            我倾向于把科研目标拆成可复现的 pipeline，并用评测指标推动迭代，而不是只做一次性的 demo。
-          </p>
+          <p class="note" style="margin-bottom:0" data-i18n="e3_note">我倾向于把科研目标拆成可复现 pipeline，并用评测指标推动迭代，而不是只做一次性 demo。</p>
         </div>
       </div>
     </div>
 
     <div id="awards" class="section">
       <div class="card">
-        <h2>竞赛与奖项（含详细介绍）</h2>
+        <h2 data-i18n="awards_h2">竞赛与奖项（含详细介绍）</h2>
 
         <details open>
-          <summary>全国大学生数学建模竞赛 · 山东省二等奖（案例 1：半导体外延层厚度反演）</summary>
+          <summary data-i18n="a1_summary">全国大学生数学建模竞赛 · 山东省二等奖（案例 1：半导体外延层厚度反演）</summary>
           <ul class="bullets">
-            <li>题目：碳化硅外延层厚度确定（B 题）</li>
-            <li>建立基于 Lorentz-Drude 色散修正的干涉物理模型，并采用“全局-局部”分层求解策略。</li>
-            <li>针对红外光谱数据的强非线性，开发融合 PSO 全局搜索与非线性最小二乘局部精修的求解程序；使用 Savitzky–Golay 滤波去噪，并用多入射角数据交叉验证鲁棒性，最终实现微米级厚度的自动反演。</li>
+            <li data-i18n="a1_li1">题目：碳化硅外延层厚度确定（B 题）。</li>
+            <li data-i18n="a1_li2">建立基于 Lorentz-Drude 色散修正的干涉物理模型，并采用全局-局部分层求解策略。</li>
+            <li data-i18n="a1_li3">针对红外光谱强非线性，融合 PSO 全局搜索与非线性最小二乘局部精修，并用多入射角数据交叉验证鲁棒性，实现微米级厚度自动反演。</li>
           </ul>
         </details>
 
         <details>
-          <summary>全国大学生数学建模竞赛 · 山东省二等奖（案例 2：电子制造“成本-质量-利润”优化）</summary>
+          <summary data-i18n="a2_summary">全国大学生数学建模竞赛 · 山东省二等奖（案例 2：电子制造成本-质量-利润优化）</summary>
           <ul class="bullets">
-            <li>构建电子制造“成本-质量-利润”优化决策系统：建立 0-1 整数规划模型并实施分层求解。</li>
-            <li>简单场景采用遍历法验证，复杂多工序系统开发基于遗传算法的 MATLAB 求解器；引入关系系数 α 并做灵敏度分析，验证真实次品率 ±50% 波动时最优决策的稳定性。</li>
+            <li data-i18n="a2_li1">构建电子制造成本-质量-利润优化决策系统，建立 0-1 整数规划模型并实施分层求解。</li>
+            <li data-i18n="a2_li2">简单场景采用遍历法验证，复杂多工序系统开发基于遗传算法的 MATLAB 求解器。</li>
+            <li data-i18n="a2_li3">引入关系系数 alpha 并做灵敏度分析，验证真实次品率波动条件下最优决策稳定性。</li>
           </ul>
         </details>
 
         <details>
-          <summary>中国合成生物学竞赛 · 银奖（AI 设计高亮度/热稳定荧光蛋白）</summary>
+          <summary data-i18n="a3_summary">中国合成生物学竞赛 · 银奖（AI 设计高亮度/热稳定荧光蛋白）</summary>
           <ul class="bullets">
-            <li>使用 ESM 对荧光蛋白序列进行高维编码，并基于序列-荧光强度数据训练 XGBoost 回归模型，实现亮度预测。</li>
-            <li>结合文献、GFP 结构分析与高亮度序列统计，开发自动化突变体生成算法并引入热稳定性偏好策略，生成数万候选并筛选获得 6 个 avGFP 优化突变体。</li>
+            <li data-i18n="a3_li1">使用 ESM 对荧光蛋白序列进行高维编码，并基于序列-荧光强度数据训练 XGBoost 回归模型。</li>
+            <li data-i18n="a3_li2">结合文献、结构分析与序列统计，开发自动化突变体生成算法并引入热稳定性偏好策略。</li>
+            <li data-i18n="a3_li3">生成数万候选并筛选获得 6 个 avGFP 优化突变体。</li>
           </ul>
         </details>
 
         <details>
-          <summary>美国大学生数学建模竞赛（MCM/ICM）· S 奖（国际三等奖）</summary>
+          <summary data-i18n="a4_summary">美国大学生数学建模竞赛（MCM/ICM）· S 奖（国际三等奖）</summary>
           <ul class="bullets">
-            <li>基于历年各国奥运奖牌数据，对 2027 年洛杉矶奥运会奖牌数进行预测。</li>
-            <li>使用指数平滑法量化并预测运动员实力，构建多元线性回归模型；通过 MSE 与单变量敏感性分析评估结果可靠性，并用时间序列分析识别异常数据点，量化并验证教练指导等因素对夺牌的影响。</li>
+            <li data-i18n="a4_li1">基于历年各国奥运奖牌数据，对 2027 年洛杉矶奥运会奖牌数进行预测。</li>
+            <li data-i18n="a4_li2">使用指数平滑法量化运动员实力并构建多元线性回归模型。</li>
+            <li data-i18n="a4_li3">通过 MSE、敏感性分析与时间序列异常点识别评估结果可靠性，并量化教练因素影响。</li>
           </ul>
         </details>
 
         <div class="footer">
-          <div>© <span id="year"></span> 李嘉烁 · Built for GitHub Pages (single-file HTML)</div>
-          <div></div>
+          <div data-i18n="footer_line">© <span id="year"></span> 李嘉烁 · Built for GitHub Pages (single-file HTML)</div>
         </div>
       </div>
     </div>
-
   </div>
 
   <script>
     (function(){
-      const key = "theme_pref_v1";
+      const themeKey = "theme_pref_v1";
+      const langKey = "lang_pref_v1";
       const root = document.documentElement;
-      const btn = document.getElementById("themeBtn");
+      const themeBtn = document.getElementById("themeBtn");
+      const langBtn = document.getElementById("langBtn");
+      const projectsGrid = document.getElementById("projectsGrid");
+      const resetProjectOrderBtn = document.getElementById("resetProjectOrder");
+      const projectOrderKey = "project_order_v1";
       const year = document.getElementById("year");
       year.textContent = new Date().getFullYear();
 
-      const saved = localStorage.getItem(key);
-      if(saved){ root.setAttribute("data-theme", saved); }
+      const translations = {
+        zh: {
+          meta_description: "AI for Science / Agentic Science | 李嘉烁个人展示页（GitHub Pages）",
+          title: "李嘉烁 | AI for Science Portfolio",
+          brand_name: "李嘉烁",
+          brand_sub: "AI for Science · Agentic Science · Synthetic Biology",
+          nav_about: "关于",
+          nav_projects: "项目",
+          nav_experience: "经历",
+          nav_awards: "奖项",
+          lang_btn: "中文 / EN",
+          theme_btn: "切换主题",
+          headline: "AI for Science：把科研问题变成可执行、可验证的计算流程",
+          tagline: "聚焦 Agent / RAG / Workflow 在科学知识理解与验证闭环中的工程化落地。",
+          hero_p1: "具备合成生物学背景，关注 AI for Science 中问题可执行化的工程实践。",
+          hero_p2: "有综述写作与实验室经历，善于用 LLM 进行文献理解并搭建可复现评测流程。",
+          hero_p3: "持续探索 Agentic Science 在真实科研场景中的可用性、可验证性与可扩展性。",
+          cta_github: "GitHub",
+          cta_projects: "查看代表项目",
+          cta_awards: "查看竞赛细节",
+          quick_profile: "Quick Profile",
+          qp_interest_k: "研究/兴趣",
+          qp_interest_v: "AI for Science · 问题可执行化 · 科研工作流自动化 · 文献理解与验证闭环",
+          qp_keywords_k: "方向关键词",
+          qp_keywords_v: "Agentic Science · Agent / RAG / Workflow · 评测与迭代优化 · 科研自动化",
+          qp_stack_k: "技术栈",
+          qp_stack_v: "Python · LangChain · Chroma/FAISS · Prompt Engineering · Workflow/Agent · 数据采集与清洗",
+          qp_location_k: "期望工作地点",
+          qp_location_v: "北京 / 上海 / 深圳",
+          pill_1: "Agent / RAG",
+          pill_2: "Workflow 自动化",
+          pill_3: "Prompt Engineering",
+          pill_4: "评测与复现",
+          about_h2: "关于我",
+          about_p: "我具备合成生物学背景，同时系统自学机器学习、深度学习与大模型相关内容，关注 AI for Science 中问题可执行化的工程实践，尤其是 Agent / RAG / Workflow 在科研信息理解与验证闭环中的应用。善于将抽象科学问题拆解为检索、结构化表示、评测与迭代优化流程，并强调可复现与可验证的指标体系建设。",
+          projects_h2: "代表项目",
+          projects_order_label: "项目排序：",
+          projects_order_reset: "恢复默认",
+          p1_h3: "荧光蛋白：高亮度 + 热稳定性联合优化（AI 设计与筛选）",
+          p1_meta: "Protein Language Model · Regression · Mutation Generation · Screening",
+          p1_li1: "使用预训练蛋白质语言模型 ESM 对荧光蛋白序列进行高维编码，捕捉进化与结构特征。",
+          p1_li2: "基于序列-荧光强度数据集训练 XGBoost 回归模型，实现亮度预测。",
+          p1_li3: "融合文献先验、结构分析与序列统计，构建自动化突变体生成与筛选流程，获得 6 个兼具高亮度与热稳定性的 avGFP 候选。",
+          p2_h3: "RAG 学术问答系统：检索准确性修复与评测驱动优化",
+          p2_meta: "Vector Retrieval · Benchmark · Query Rewrite · Debug Tooling",
+          p2_li1: "基于开源 RAG 项目构建学术论文问答系统，并使用自建 benchmark 做性能评估与迭代优化。",
+          p2_li2: "修复相似度计算问题，将向量库距离计算修正为余弦相似度以提升检索准确性。",
+          p2_li3: "引入 LLM Query Rewrite 与 chunking 参数对比实验，提升低相似度问题检索表现并识别适用边界。",
+          p2_repo: "Repo: rag-example",
+          p3_h3: "Bio-Validator：基于大模型的代谢工程干预策略生成与验证",
+          p3_meta: "Agentic Workflow · LLM · Validation Gates · Benchmark · Traceability",
+          p3_li1: "构建可验证代谢工程建议生成工作流，利用 DeepSeek API 解析文献证据与宿主目标，输出结构化基因编辑与代谢干预策略。",
+          p3_li2: "针对大模型在生物垂直领域的幻觉问题，开发多重 Validation Gates，自动校验实体一致性、证据引用准确性及基础可行性。",
+          p3_li3: "自建正负例 Benchmark（真实文献溯源），通过负例拦截测试与自动化 Trace 评测报告实现评测驱动的 Workflow 优化。",
+          p3_repo: "Repo: bio-validator-demo",
+          p4_h3: "细菌博弈赛：大肠杆菌运动能力多级调控强化",
+          p4_meta: "Promoter engineering · Transcriptional regulation · Sigma28 overexpression · Motility assay",
+          p4_li1: "通过将序列元件 IS5 整合至 flhD 操纵子调节区，干扰 OmpR 和 RcsB 等负调控因子的结合位点，解除转录抑制并提升 flhD 起始转录水平。",
+          p4_li2: "构建由高效 T7 启动子驱动的 sigma28 高表达质粒，实现鞭毛特异性 σ 因子增强表达，从而强化大肠杆菌在软琼脂培养基中的运动能力与趋化响应。",
+          p4_li3: "采用 RT-qPCR 对相关基因表达水平进行定量检测，并结合运动环直径测定完成表型验证，形成干湿实验闭环；最终显著提升菌株在群体竞争中的运动优势，并获得中国合成生物学竞赛银奖。",
+          p4_repo: "Repo: ai4s",
+          exp_h2: "经历与方法论",
+          e1_h3: "AI Agent / Workflow 实习（内容生产与增长场景）",
+          e1_meta: "Workflow Orchestration · Data Pipeline · Prompt Iteration",
+          e1_li1: "将内容生产任务抽象为多阶段可执行流程（数据采集、结构化处理、生成、回流验证闭环），探索 Agent 化在复杂任务中的可控性与稳定性。",
+          e1_li2: "使用 Python 构建自动化数据采集与清洗流程，将多源非结构化内容转化为结构化输入，并结合运行结果分析 Prompt 与流程设计对输出稳定性的影响。",
+          e1_li3: "复现典型 Workflow/Agent 示例，系统记录失败模式与人工介入点，用于验证方案可行性与边界。",
+          e2_h3: "科研经历与方法论形成",
+          e2_meta: "Literature Synthesis · Recursive Citation Tracing · Research Workflow Engineering",
+          e2_li1: "围绕聚羟基烷酸酯（PHA），尤其是酵母合成 PHB 的代谢路径优化，在导师指导下开展系统性综述研究，并逐步形成结构化科研方法。",
+          e2_li2: "采用递归式文献追踪策略，持续追溯参考文献与被引文献，梳理基因干预策略、调控机制及颗粒结构蛋白研究的演进逻辑，构建跨论文一体化知识框架。",
+          e2_li3: "综述论文主体内容已基本完成（尚未见刊），该过程显著提升了原始文献整合、机制对比分析与结构化写作能力。",
+          e2_li4: "在此基础上开发可验证代谢工程建议生成器，构建基于真实 PHA 文献的 20+ case benchmark，并设计多重验证机制系统评估 AI 生成建议。",
+          e2_li5: "逐步形成方法论认识：科研问题应尽可能被结构化、可检验化，并朝向可复现流程持续演进。",
+          e3_h3: "我在 AI4S 中的关注点",
+          e3_meta: "From Representation to Prediction, Design, and Verification Loop",
+          e3_summary: "核心闭环（适用于生命科学）",
+          e3_li1: "表征：序列/结构到 embedding（如 ESM）。",
+          e3_li2: "预测：性质/表型到回归/分类模型（如 XGBoost）。",
+          e3_li3: "设计：突变/生成策略与约束联合优化（如热稳定性偏好）。",
+          e3_li4: "验证：筛选与实验验证（wet lab / in silico）。",
+          e3_li5: "迭代：评测驱动的误差分析与数据/策略更新。",
+          e3_note: "我倾向于把科研目标拆成可复现 pipeline，并用评测指标推动迭代，而不是只做一次性 demo。",
+          awards_h2: "竞赛与奖项（含详细介绍）",
+          a1_summary: "全国大学生数学建模竞赛 · 山东省二等奖（案例 1：半导体外延层厚度反演）",
+          a1_li1: "题目：碳化硅外延层厚度确定（B 题）。",
+          a1_li2: "建立基于 Lorentz-Drude 色散修正的干涉物理模型，并采用全局-局部分层求解策略。",
+          a1_li3: "针对红外光谱强非线性，融合 PSO 全局搜索与非线性最小二乘局部精修，并用多入射角数据交叉验证鲁棒性，实现微米级厚度自动反演。",
+          a2_summary: "全国大学生数学建模竞赛 · 山东省二等奖（案例 2：电子制造成本-质量-利润优化）",
+          a2_li1: "构建电子制造成本-质量-利润优化决策系统，建立 0-1 整数规划模型并实施分层求解。",
+          a2_li2: "简单场景采用遍历法验证，复杂多工序系统开发基于遗传算法的 MATLAB 求解器。",
+          a2_li3: "引入关系系数 alpha 并做灵敏度分析，验证真实次品率波动条件下最优决策稳定性。",
+          a3_summary: "中国合成生物学竞赛 · 银奖（AI 设计高亮度/热稳定荧光蛋白）",
+          a3_li1: "使用 ESM 对荧光蛋白序列进行高维编码，并基于序列-荧光强度数据训练 XGBoost 回归模型。",
+          a3_li2: "结合文献、结构分析与序列统计，开发自动化突变体生成算法并引入热稳定性偏好策略。",
+          a3_li3: "生成数万候选并筛选获得 6 个 avGFP 优化突变体。",
+          a4_summary: "美国大学生数学建模竞赛（MCM/ICM）· S 奖（国际三等奖）",
+          a4_li1: "基于历年各国奥运奖牌数据，对 2027 年洛杉矶奥运会奖牌数进行预测。",
+          a4_li2: "使用指数平滑法量化运动员实力并构建多元线性回归模型。",
+          a4_li3: "通过 MSE、敏感性分析与时间序列异常点识别评估结果可靠性，并量化教练因素影响。",
+          footer_line: "© <span id=\"year\"></span> 李嘉烁 · Built for GitHub Pages (single-file HTML)"
+        },
+        en: {
+          meta_description: "AI for Science / Agentic Science | Jiashuo Li Portfolio (GitHub Pages)",
+          title: "Jiashuo Li | AI for Science Portfolio",
+          brand_name: "Jiashuo Li",
+          brand_sub: "AI for Science · Agentic Science · Synthetic Biology",
+          nav_about: "About",
+          nav_projects: "Projects",
+          nav_experience: "Experience",
+          nav_awards: "Awards",
+          lang_btn: "EN / 中文",
+          theme_btn: "Toggle Theme",
+          headline: "AI for Science: Turning Research Questions into Executable and Verifiable Workflows",
+          tagline: "Focused on engineering Agent/RAG/Workflow systems for scientific understanding and closed-loop validation.",
+          hero_p1: "With a synthetic biology background, I focus on making scientific problems executable in AI for Science pipelines.",
+          hero_p2: "I combine literature synthesis and lab experience to build LLM-powered, reproducible evaluation workflows.",
+          hero_p3: "I continuously explore the usability, verifiability, and scalability of Agentic Science in real research settings.",
+          cta_github: "GitHub",
+          cta_projects: "View Projects",
+          cta_awards: "View Awards",
+          quick_profile: "Quick Profile",
+          qp_interest_k: "Focus",
+          qp_interest_v: "AI for Science · Problem Operationalization · Scientific Workflow Automation · Literature-to-Validation Loop",
+          qp_keywords_k: "Keywords",
+          qp_keywords_v: "Agentic Science · Agent / RAG / Workflow · Evaluation-Driven Iteration · Research Automation",
+          qp_stack_k: "Tech Stack",
+          qp_stack_v: "Python · LangChain · Chroma/FAISS · Prompt Engineering · Workflow/Agent · Data Collection and Cleaning",
+          qp_location_k: "Preferred Cities",
+          qp_location_v: "Beijing / Shanghai / Shenzhen",
+          pill_1: "Agent / RAG",
+          pill_2: "Workflow Automation",
+          pill_3: "Prompt Engineering",
+          pill_4: "Evaluation and Reproducibility",
+          about_h2: "About",
+          about_p: "I have a synthetic biology background and systematic self-training in machine learning, deep learning, and LLM-related methods. I focus on engineering practices that make scientific questions executable, especially Agent/RAG/Workflow systems for literature understanding and validation loops. I am strong at decomposing abstract research tasks into retrieval, structured representation, evaluation, and iterative optimization with reproducible, verifiable metrics.",
+          projects_h2: "Selected Projects",
+          projects_order_label: "Project Order:",
+          projects_order_reset: "Reset Default",
+          p1_h3: "Fluorescent Protein Co-optimization: Brightness + Thermal Stability (AI Design and Screening)",
+          p1_meta: "Protein Language Model · Regression · Mutation Generation · Screening",
+          p1_li1: "Used the pretrained protein language model ESM to encode fluorescent protein sequences and capture evolutionary and structural signals.",
+          p1_li2: "Trained an XGBoost regression model on sequence-brightness data to predict fluorescence intensity.",
+          p1_li3: "Integrated literature priors, structural analysis, and sequence statistics into an automated mutation generation and screening pipeline, yielding six avGFP candidates with high brightness and thermal stability.",
+          p2_h3: "RAG Academic QA System: Retrieval Fixes and Evaluation-Driven Optimization",
+          p2_meta: "Vector Retrieval · Benchmark · Query Rewrite · Debug Tooling",
+          p2_li1: "Built an academic paper QA system on an open-source RAG framework and iteratively optimized it with a custom benchmark.",
+          p2_li2: "Fixed similarity computation by switching vector scoring to cosine similarity for better retrieval accuracy.",
+          p2_li3: "Introduced LLM-based query rewriting and chunking parameter comparisons to improve low-similarity query performance and identify applicability boundaries.",
+          p2_repo: "Repo: rag-example",
+          p3_h3: "Bio-Validator: LLM-driven Metabolic Engineering Strategy Generation and Validation",
+          p3_meta: "Agentic Workflow · LLM · Validation Gates · Benchmark · Traceability",
+          p3_li1: "Built a verifiable workflow that uses the DeepSeek API to parse literature evidence and host objectives, then outputs structured gene-editing and metabolic intervention strategies.",
+          p3_li2: "Addressed LLM hallucinations in a biology-specific domain by implementing multi-layer Validation Gates for entity consistency, evidence citation accuracy, and baseline feasibility checks.",
+          p3_li3: "Created a positive/negative benchmark with real literature traceability and used negative interception tests plus automated trace reports for evaluation-driven workflow optimization.",
+          p3_repo: "Repo: bio-validator-demo",
+          p4_h3: "Bacterial Game Competition: Multi-level Enhancement of E. coli Motility Regulation",
+          p4_meta: "Promoter engineering · Transcriptional regulation · Sigma28 overexpression · Motility assay",
+          p4_li1: "Integrated the IS5 sequence element into the flhD operon regulatory region to disrupt binding sites of negative regulators such as OmpR and RcsB, relieve transcriptional repression, and increase flhD transcription initiation.",
+          p4_li2: "Constructed a sigma28 overexpression plasmid driven by a high-efficiency T7 promoter to enhance flagella-specific sigma factor expression, thereby strengthening E. coli motility and chemotactic response on soft-agar medium.",
+          p4_li3: "Quantified key gene expression by RT-qPCR and validated phenotype via motility ring diameter measurements, forming a dry-lab/wet-lab closed loop; this significantly improved motility advantage in population competition and won a Silver Award in the China Synthetic Biology Competition.",
+          p4_repo: "Repo: ai4s",
+          exp_h2: "Experience and Methodology",
+          e1_h3: "AI Agent / Workflow Internship (Content Production and Growth)",
+          e1_meta: "Workflow Orchestration · Data Pipeline · Prompt Iteration",
+          e1_li1: "Abstracted content production into a multi-stage executable flow (data collection -> structuring -> generation -> feedback and validation) to improve controllability and stability.",
+          e1_li2: "Built Python-based automated data collection and cleaning pipelines to convert multi-source unstructured data into structured inputs and analyzed stability impacts of prompts and flow design.",
+          e1_li3: "Reproduced representative Workflow/Agent patterns and documented failure modes and human intervention points to validate feasibility and boundaries.",
+          e2_h3: "Research Experience and Methodology Formation",
+          e2_meta: "Literature Synthesis · Recursive Citation Tracing · Research Workflow Engineering",
+          e2_li1: "Conducted a systematic review under advisor guidance on PHA, especially metabolic pathway optimization for PHB synthesis in yeast, and gradually formed a structured research approach.",
+          e2_li2: "Adopted recursive citation tracing by continuously following references and cited-by chains to map the evolution of gene intervention strategies, regulatory mechanisms, and granule structural protein studies across papers.",
+          e2_li3: "The main body of the review manuscript is largely completed (not yet published), which significantly strengthened my capabilities in primary literature integration, mechanism-level comparative analysis, and structured scientific writing.",
+          e2_li4: "Built the verifiable metabolic engineering recommendation generator by converting literature insights into an executable engineering workflow, including a 20+ case benchmark based on real PHA literature and multi-gate validation for AI-generated interventions.",
+          e2_li5: "This led to a core methodology: research problems should be structured and testable, and continuously evolved toward reproducible workflows.",
+          e3_h3: "My Focus in AI4S",
+          e3_meta: "From Representation to Prediction, Design, and Verification Loop",
+          e3_summary: "Core Loop for Life Science",
+          e3_li1: "Representation: sequence/structure to embeddings (e.g., ESM).",
+          e3_li2: "Prediction: property/phenotype to regression or classification models (e.g., XGBoost).",
+          e3_li3: "Design: mutation/generation strategies with constraints (e.g., thermal stability preference).",
+          e3_li4: "Verification: candidate screening and validation (wet lab / in silico).",
+          e3_li5: "Iteration: evaluation-driven error analysis and updates to data and strategy.",
+          e3_note: "I prefer turning research goals into reproducible pipelines and driving iteration with measurable evaluation metrics, rather than building one-off demos.",
+          awards_h2: "Competitions and Awards (Detailed)",
+          a1_summary: "National Undergraduate Mathematical Contest in Modeling · Shandong Second Prize (Case 1: Semiconductor Epitaxial Thickness Inversion)",
+          a1_li1: "Problem: SiC epitaxial layer thickness estimation (Problem B).",
+          a1_li2: "Built an interference physics model with Lorentz-Drude dispersion correction and a global-to-local layered optimization strategy.",
+          a1_li3: "For highly nonlinear IR spectra, combined PSO global search with nonlinear least-squares local refinement, validated robustness with multi-angle data, and achieved automated micron-level thickness inversion.",
+          a2_summary: "National Undergraduate Mathematical Contest in Modeling · Shandong Second Prize (Case 2: Cost-Quality-Profit Optimization in Electronics Manufacturing)",
+          a2_li1: "Developed a cost-quality-profit decision system using a 0-1 integer programming model with hierarchical solving.",
+          a2_li2: "Used exhaustive validation for simple scenarios and a GA-based MATLAB solver for complex multi-process systems.",
+          a2_li3: "Introduced a relation coefficient alpha with sensitivity analysis to verify strategy stability under defect-rate fluctuations.",
+          a3_summary: "China Synthetic Biology Competition · Silver Award (AI-designed High-brightness and Thermostable Fluorescent Protein)",
+          a3_li1: "Used ESM to generate high-dimensional sequence embeddings and trained an XGBoost regression model on sequence-brightness data.",
+          a3_li2: "Combined literature evidence, structure analysis, and sequence statistics to build an automated mutation generator with thermal-stability preference.",
+          a3_li3: "Generated tens of thousands of candidates and selected six optimized avGFP mutants.",
+          a4_summary: "MCM/ICM · S Award (International Third Prize)",
+          a4_li1: "Predicted medal counts for the 2027 Los Angeles Olympics based on historical national medal data.",
+          a4_li2: "Quantified athlete strength with exponential smoothing and built a multivariate linear regression model.",
+          a4_li3: "Evaluated reliability with MSE, sensitivity analysis, and time-series outlier detection, and quantified coaching effects.",
+          footer_line: "© <span id=\"year\"></span> Jiashuo Li · Built for GitHub Pages (single-file HTML)"
+        }
+      };
 
-      function toggle(){
+      function applyLanguage(lang){
+        const locale = translations[lang] ? lang : "zh";
+        const dict = translations[locale];
+        document.documentElement.lang = locale === "en" ? "en" : "zh-CN";
+        document.title = dict.title;
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute("content", dict.meta_description);
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (!key || dict[key] === undefined) return;
+          if (key === "footer_line") {
+            el.innerHTML = dict[key];
+            const yearNode = document.getElementById("year");
+            if (yearNode) yearNode.textContent = new Date().getFullYear();
+          } else {
+            el.textContent = dict[key];
+          }
+        });
+        const orderLabel = document.querySelector(".project-toolbar .label");
+        if (orderLabel && dict.projects_order_label) orderLabel.textContent = dict.projects_order_label;
+        if (resetProjectOrderBtn && dict.projects_order_reset) resetProjectOrderBtn.textContent = dict.projects_order_reset;
+        localStorage.setItem(langKey, locale);
+      }
+
+      function getProjectCards(){
+        return projectsGrid ? Array.from(projectsGrid.querySelectorAll(".project-card")) : [];
+      }
+
+      const defaultProjectOrder = getProjectCards().map((card) => card.dataset.projectId).filter(Boolean);
+
+      function saveProjectOrder(){
+        const ids = getProjectCards().map((card) => card.dataset.projectId).filter(Boolean);
+        localStorage.setItem(projectOrderKey, ids.join(","));
+      }
+
+      function renderProjectControls(){
+        const cards = getProjectCards();
+        cards.forEach((card, index) => {
+          let controls = card.querySelector(".project-move");
+          if (!controls) {
+            controls = document.createElement("div");
+            controls.className = "project-move";
+            const upBtn = document.createElement("button");
+            upBtn.type = "button";
+            upBtn.className = "chip move-btn move-up";
+            upBtn.textContent = "Up";
+            upBtn.title = "Move Up";
+            const downBtn = document.createElement("button");
+            downBtn.type = "button";
+            downBtn.className = "chip move-btn move-down";
+            downBtn.textContent = "Down";
+            downBtn.title = "Move Down";
+            controls.appendChild(upBtn);
+            controls.appendChild(downBtn);
+            card.insertBefore(controls, card.firstChild);
+            upBtn.addEventListener("click", () => {
+              const prev = card.previousElementSibling;
+              if (!prev) return;
+              projectsGrid.insertBefore(card, prev);
+              saveProjectOrder();
+              renderProjectControls();
+            });
+            downBtn.addEventListener("click", () => {
+              const next = card.nextElementSibling;
+              if (!next) return;
+              projectsGrid.insertBefore(next, card);
+              saveProjectOrder();
+              renderProjectControls();
+            });
+          }
+          const up = controls.querySelector(".move-up");
+          const down = controls.querySelector(".move-down");
+          if (up) up.disabled = index === 0;
+          if (down) down.disabled = index === cards.length - 1;
+        });
+      }
+
+      function applySavedProjectOrder(){
+        if (!projectsGrid) return;
+        const saved = localStorage.getItem(projectOrderKey);
+        if (!saved) return;
+        const cardsById = new Map(getProjectCards().map((card) => [card.dataset.projectId, card]));
+        saved.split(",").forEach((id) => {
+          const card = cardsById.get(id);
+          if (card) projectsGrid.appendChild(card);
+        });
+      }
+
+      function resetProjectOrder(){
+        if (!projectsGrid) return;
+        const cardsById = new Map(getProjectCards().map((card) => [card.dataset.projectId, card]));
+        defaultProjectOrder.forEach((id) => {
+          const card = cardsById.get(id);
+          if (card) projectsGrid.appendChild(card);
+        });
+        localStorage.removeItem(projectOrderKey);
+        renderProjectControls();
+      }
+
+      const savedTheme = localStorage.getItem(themeKey);
+      if (savedTheme) root.setAttribute("data-theme", savedTheme);
+      const savedLang = localStorage.getItem(langKey) || "zh";
+      applyLanguage(savedLang);
+      applySavedProjectOrder();
+      renderProjectControls();
+      if (resetProjectOrderBtn) {
+        resetProjectOrderBtn.addEventListener("click", resetProjectOrder);
+      }
+
+      function toggleTheme(){
         const cur = root.getAttribute("data-theme");
         const next = (cur === "light") ? "dark" : "light";
         root.setAttribute("data-theme", next);
-        localStorage.setItem(key, next);
+        localStorage.setItem(themeKey, next);
       }
-      btn.addEventListener("click", toggle);
-      btn.addEventListener("keydown", (e)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
 
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener("click", (e)=>{
+      function toggleLang(){
+        const cur = localStorage.getItem(langKey) || "zh";
+        const next = cur === "zh" ? "en" : "zh";
+        applyLanguage(next);
+      }
+
+      themeBtn.addEventListener("click", toggleTheme);
+      themeBtn.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleTheme(); } });
+      langBtn.addEventListener("click", toggleLang);
+      langBtn.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleLang(); } });
+
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
           const id = a.getAttribute("href");
           const el = document.querySelector(id);
-          if(!el) return;
+          if (!el) return;
           e.preventDefault();
-          el.scrollIntoView({behavior:"smooth", block:"start"});
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
     })();
